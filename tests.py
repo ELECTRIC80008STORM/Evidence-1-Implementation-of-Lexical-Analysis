@@ -1,8 +1,11 @@
-import regex
+"""
+Tests For The Lexical Analysis Script
 
+This script tests the lexical analysis with
+sets of words to test all scenarios
 """
-The implemented tests cover positive, negative and edge cases
-"""
+
+import regex
 
 count = 0
 
