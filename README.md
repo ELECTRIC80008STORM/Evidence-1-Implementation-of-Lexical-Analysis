@@ -73,6 +73,8 @@ for i in list:
 print(count)
 ```
 
+In this example, the time complexity is linear because the loop runs once for each element in the list.
+
 
 #### Polynomial Time Complexity O(mn)
 
@@ -87,6 +89,9 @@ for element1 in list1:
       commonElements++
 print(commonElements)
 ```
+
+In this example, the time complexity is polynomial because there are two nested loops, each running for the length of their respective lists.
+
 
 ## References
 
