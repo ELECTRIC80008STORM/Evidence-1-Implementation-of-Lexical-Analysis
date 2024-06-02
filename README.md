@@ -52,7 +52,7 @@ Although I wasn’t able to directly analyze the implementation that Python uses
 _Note:
 In regular expressions, backtracking happens when the engine tries to match a pattern to a string but reaches a point where it can’t continue the current path it’s taking, so it “backtracks” to the last place where it had the possibility of making a different choice. It’s useful to visualize it using the above automaton._
 
-Now, in the particular case of my regular expression, the inclusion of starting and ending anchors significantly optimizes this complexity. This is thanks to the lack of abstraction that makes the regex quickly discard the input strings that don't match the required patterns, thus no backtracking is required and both the worst and average cases complexities end up being nearly identical and closer to to **linear _O(n)_** or **polynomial _O(mn)_** time complexities.
+Now, in the particular case of my regular expression, the inclusion of starting and ending anchors significantly optimizes this complexity. This is thanks to the lack of abstraction that makes the regex quickly discard the input strings that don't match the required patterns, thus no backtracking is required and both the worst and average cases complexities end up being nearly identical and closer to **linear _O(n)_** or **polynomial _O(mn)_** time complexities.
 
 ### Worst Case:
 
@@ -93,8 +93,14 @@ print(commonElements)
 In this example, the time complexity is polynomial because there are two nested loops, each running for the length of their respective lists.
 
 
+## Different Approach
+
+An alternative approach to using regex is demonstrated in the `alternativeToRegex.py` file. In this approach, the solution is achieved through list methods, specifically the `count()` method, which allows us to determine the number of times a certain value appears in the list. When the word is found one or more times in the list, we can be sure that the user input matches one of the words in the Elven language subset. This solution offers more clarity than the regex approach and the same time complexity of O(n) that our regex has in most cases. This time complexity is achieved thanks to the `count()` method, which only iterates through the list, and adds to a counter whenever a value match is found.
+
+
 ## References
 
 - Cox, R. (2007, January). "Regular expression matching can be simple and fast." [https://swtch.com/~rsc/regexp/regexp1.html](https://swtch.com/~rsc/regexp/regexp1.html).
 - "Python RegEx." (n.d.). [https://www.w3schools.com/python/python_regex.asp](https://www.w3schools.com/python/python_regex.asp).
 - "re — Regular expression operations." (n.d.). [https://docs.python.org/3/library/re.html)](https://docs.python.org/3/library/re.html).
+- What is the time complexity of Python list’s count() function? (n.d.). Stack Overflow. [https://stackoverflow.com/questions/44812468/what-is-the-time-complexity-of-python-lists-count-function](https://stackoverflow.com/questions/44812468/what-is-the-time-complexity-of-python-lists-count-function)
