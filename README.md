@@ -93,7 +93,7 @@ print(commonElements)
 In this example, the time complexity is polynomial because there are two nested loops, each running for the length of their respective lists.
 
 
-## Different Approach
+### Different Approach
 
 An alternative approach to using regex is demonstrated in the `alternativeToRegex.py` file. In this approach, the solution is achieved through list methods, specifically the `count()` method, which allows us to determine the number of times a certain value appears in the list. When the word is found one or more times in the list, we can be sure that the user input matches one of the words in the Elven language subset. This solution offers more clarity than the regex approach and the same time complexity of O(n) that our regex has in most cases. This time complexity is achieved thanks to the `count()` method, which only iterates through the list, and adds to a counter whenever a value match is found.
 
