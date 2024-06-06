@@ -62,40 +62,18 @@ A string that almost matches one of the options but fails at the last character,
 
 A random distribution of input strings, where many inputs are going to be quickly rejected.
 
-### Hand Analysis Time Complexities
-
-#### Linear Time Complexity O(n)
-
-```py
-count = 0
-for i in list:
-  count++
-print(count)
-```
-
-In this example, the time complexity is linear because the loop runs once for each element in the list.
-
-
-#### Polynomial Time Complexity O(mn)
-
-```py
-commonElements = 0
-list1 = [elements]
-list2 = [elements]
-
-for element1 in list1:
-  for element2 in list2:
-    if element1 == element2:
-      commonElements++
-print(commonElements)
-```
-
-In this example, the time complexity is polynomial because there are two nested loops, each running for the length of their respective lists.
-
 
 ### Different Approach
 
-An alternative approach to using regex is demonstrated in the `alternativeToRegex.py` file. In this approach, the solution is achieved through list methods, specifically the `count()` method, which allows us to determine the number of times a certain value appears in the list. When the word is found one or more times in the list, we can be sure that the user input matches one of the words in the Elven language subset. This solution offers more clarity than the regex approach and the same time complexity of O(n) that our regex has in most cases. This time complexity is achieved thanks to the `count()` method, which only iterates through the list, and adds to a counter whenever a value match is found.
+An alternative approach to using regex is demonstrated in the `alternativeToRegex.py` file. In this approach, the solution is achieved through list methods, specifically the `count()` method, which allows us to determine the number of times a certain value appears in the list. When the word is found one or more times in the list, we can be sure that the user input matches one of the words in the Elven language subset. This solution offers more clarity than the regex approach and the same time complexity of _O(n)_ that our regex has in most cases. This time complexity is achieved thanks to the `count()` method, which only iterates through the list, and adds to a counter whenever a value match is found.
+
+This is the equivalent of the `count` method, it allows us to better understand its time complexity of _O(n)_. "word" is the string we are using to test if it's part of the Elvish language.
+```py
+counter = 0
+for element in elvenSubset:
+    if element.lower() == word.lower():
+        counter += 1
+```
 
 
 ## References
